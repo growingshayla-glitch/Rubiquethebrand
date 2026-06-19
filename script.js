@@ -69,7 +69,7 @@ const PRODUCTS = [
   {
     id: "p6",
     name: "Acne Treatment Gel",
-    price: 12500,
+    price: 100,
     tag: "Clear Skin",
     desc: "Targets blemishes overnight",
     img: "https://images.unsplash.com/photo-1570194065650-d99fb4ee0e02?auto=format&fit=crop&w=500&q=80"
@@ -273,7 +273,7 @@ cartItemsEl.addEventListener("click", (e) => {
    --------------------------------------------------------------------- */
 function buildWhatsappMessage(customerName, address){
   if(cart.length === 0) return "";
-  let lines = [`Hello Rubique Skin Lab, I want to place an order:`, "", "Products:"];
+  let lines = [`Hello Rubique Skeen Lab, I want to place an order:`, "", "Products:"];
   cart.forEach(item => {
     const p = getProduct(item.id);
     if(p) lines.push(`- ${p.name} x${item.qty}`);
@@ -297,7 +297,7 @@ document.getElementById("whatsappOrderBtn").addEventListener("click", () => {
 
 /* General WhatsApp floating button + contact button -> open plain chat */
 const whatsappFloat = document.getElementById("whatsappFloat");
-whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Rubique Skin Lab, I have a question about your products.")}`;
+whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Rubique Skeen Lab, I have a question about your prices.")}`;
 
 document.getElementById("contactWhatsappBtn").addEventListener("click", () => {
   window.open(whatsappFloat.href, "_blank");
@@ -307,7 +307,7 @@ document.getElementById("contactWhatsappBtn").addEventListener("click", () => {
 const customOrderBtn = document.getElementById("customOrderBtn");
 if (customOrderBtn) {
   customOrderBtn.addEventListener("click", () => {
-    const message = "Hello Rubique Skin Lab, I'm looking for a product that isn't listed on your website. Here's my full order:\n\n- Product(s): \n- Quantity: \n\nName: \nDelivery Address: ";
+    const message = "Hello Rubique Skeen Lab, I'm looking for a product that isn't listed on your website. Here's my full order:\n\n- Product(s): \n- Quantity: \n\nName: \nDelivery Address: ";
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   });
