@@ -19,7 +19,7 @@ setTimeout(() => {
 /* ---------------------------------------------------------------------
    ⚠️ CONFIG — replace these two values with your real details
    --------------------------------------------------------------------- */
-const PAYSTACK_PUBLIC_KEY = "pk_test_REPLACE_WITH_YOUR_PAYSTACK_PUBLIC_KEY";
+const PAYSTACK_PUBLIC_KEY = "pk_test_4dda658bb82e04b88a76b52548dffe5fc851cb0a";
 const WHATSAPP_NUMBER = "2348166947817"; // country code + number, no + or spaces
 
 /* ---------------------------------------------------------------------
