@@ -81,7 +81,7 @@ const PRODUCTS = [
   },
   {
     id: "p4",
-    name: "Biore UV Sunscreen <big>",
+    name: "Biore UV Sunscreen (big)",
     price: 5000,
     tag: "Must-Have",
     desc: "Broad-spectrum, no white cast",
@@ -171,17 +171,83 @@ const PRODUCTS = [
     img: "Simplecleansers.jpeg",
     soldOut: true
   },
+   {
+    id: "p15",
+    name: "Whitening cream for armpit",
+    price: 3500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Whiteningcream.jpeg",
+    soldOut: true
+  },
+{
+    id: "p16",
+    name: "Dr rashel",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Drrashel.jpeg",
+    soldOut: true
+  },
+   
+{
+    id: "p17",
+    name: "Dr Teals",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Drteals.jpeg",
+    soldOut: true
+  },
+{
+    id: "p18",
+    name: "Pei mei serum",
+    price: 3000,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Serums.jpeg",
+    soldOut: true
+  },
+{
+    id: "p19",
+    name: "Face Facts",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Facefacts.jpeg",
+    soldOut: true
+  },
+   {
+    id: "p21",
+    name: "Mini Fans",
+    price: 4000,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Minifans.jpeg",
+    soldOut: true
+  },
   /* ── COMBO CARD EXAMPLE — one image, four products underneath ── */
   {
     id: "combo1",
     type: "combo",
     tag: "Top Picks",
-    img: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=500&q=80",
+    img: "Lipcare.jpeg",
     items: [
-      { name: "Tea Tree Cleanser",    price: 3500, soldOut: false },
-      { name: "Dr. Rashel Serum",     price: 8500, soldOut: false },
-      { name: "Kuu Spa Body Scrub",   price: 6000, soldOut: true  },
-      { name: "Brightening Toner",    price: 4200, soldOut: false }
+      { name: "Lip balm",    price: 700, soldOut: false },
+      { name: "Lip Scrub",     price: 700, soldOut: false },
+      { name: "Lip Mask",   price: 300, soldOut: false  },
+      { name: "Lip Brush",    price: 700, soldOut: false }
+    ]
+      {
+    id: "combo2",
+    type: "combo",
+    tag: "Top Picks",
+    img: "Sheetmask.jpeg",
+    items: [
+      { name: "Face mask",    price: 300, soldOut: false },
+      { name: "Dual face brush",     price: 2500, soldOut: false },
+      { name: "Eye Mask",   price: 300, soldOut: false  },
+      { name: "Dozen price (face,eye and lip)",    price: 3000, soldOut: false }
     ]
   }
   /* ── Keep adding products below. Copy a block from above. ── */
