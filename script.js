@@ -97,14 +97,79 @@ const PRODUCTS = [
     img: "Simoletoner.jpeg",
     soldOut: false
   },
-  {
+   {
     id: "p6",
-    name: "Acne Treatment Gel",
-    price: 12500,
+    name: "Simple Moisturizer",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Simplemoisteurizer.jpeg",
+    soldOut: true
+  },
+
+{
+    id: "p7",
+    name: "Cerave",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Ceraveproducts.jpeg",
+    soldOut: true
+  },
+
+{
+    id: "p8",
+    name: "Dove(pack of 4)",
+    price: 3000,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Dove.jpeg",
+    soldOut: true
+  },
+{
+    id: "p9",
+    name: "Vaseline",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Vaseline.jpeg",
+    soldOut: true
+  },
+   {
+    id: "p11",
+    name: "Nivea",
+    price: 6500,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "Niveaproducts.jpeg",
+    soldOut: true
+  },
+   {
+    id: "p12",
+    name: "Roll on",
+    price: 1500,
+    tag: "Hydration+",
+    desc: "24hr moisture",
+    img: "Rollon.jpeg",
+    soldOut: true
+  },
+   {
+    id: "p14",
+    name: "Armpit spray",
+    price: 5000,
+    tag: "Hydration+",
+    desc: "24hr barrier-repair moisture",
+    img: "armpitspray.jpeg",
+    soldOut: false
+  },
+  {
+    id: "p13",
+    name: "Simple Gel wash",
+    price: 5000,
     tag: "Clear Skin",
     desc: "Targets blemishes overnight",
-    img: "https://images.unsplash.com/photo-1570194065650-d99fb4ee0e02?auto=format&fit=crop&w=500&q=80",
-    soldOut: false
+    img: "Simplecleansers.jpeg",
+    soldOut: true
   },
   /* ── COMBO CARD EXAMPLE — one image, four products underneath ── */
   {
