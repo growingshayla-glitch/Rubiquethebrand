@@ -226,6 +226,7 @@ const PRODUCTS = [
     img: "Minifans.jpeg",
     soldOut: true
   },
+   
   /* ── COMBO CARD EXAMPLE — one image, four products underneath ── */
   {
     id: "combo1",
@@ -237,17 +238,6 @@ const PRODUCTS = [
       { name: "Lip Scrub",     price: 700, soldOut: false },
       { name: "Lip Mask",   price: 300, soldOut: false  },
       { name: "Lip Brush",    price: 700, soldOut: false }
-    ]
-      {
-    id: "combo2",
-    type: "combo",
-    tag: "Top Picks",
-    img: "Sheetmask.jpeg",
-    items: [
-      { name: "Face mask",    price: 300, soldOut: false },
-      { name: "Dual face brush",     price: 2500, soldOut: false },
-      { name: "Eye Mask",   price: 300, soldOut: false  },
-      { name: "Dozen price (face,eye and lip)",    price: 3000, soldOut: false }
     ]
   }
   /* ── Keep adding products below. Copy a block from above. ── */
