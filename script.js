@@ -54,11 +54,11 @@ const WHATSAPP_NUMBER = "2348166947817"; // country code + number, no + or space
 const PRODUCTS = [
   {
     id: "p1",
-    name: "Glow Vitamin C Serum",
-    price: 18500,
+    name: "Aloevera gel",
+    price: 3000,
     tag: "Bestseller",
-    desc: "Brightens & evens skin tone",
-    img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80",
+    desc: "moisturizes skin",
+    img: "Aloevera.jpeg",
     soldOut: false
   },
   {
