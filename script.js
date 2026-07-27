@@ -63,38 +63,38 @@ const PRODUCTS = [
   },
   {
     id: "p2",
-    name: "Hydrating Face Cleanser",
-    price: 9500,
+    name: "Tea Tree Toner",
+    price: 4000,
     tag: "Daily Essential",
     desc: "Gentle, sulfate-free formula",
-    img: "https://images.unsplash.com/photo-1556228852-80b6e2a5ea6e?auto=format&fit=crop&w=500&q=80",
+    img: "Tttoner.jpeg",
     soldOut: false
   },
   {
     id: "p3",
-    name: "Radiance Glow Oil",
-    price: 14000,
+    name: "Tea Tree Scrub",
+    price: 4000,
     tag: "Cult Favourite",
     desc: "Lightweight, fast-absorbing oil",
-    img: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=500&q=80",
+    img: "Ttscrub.jpeg",
     soldOut: false
   },
   {
     id: "p4",
-    name: "SPF 50 Sunscreen",
-    price: 11000,
+    name: "Biore UV Sunscreen <big>",
+    price: 5000,
     tag: "Must-Have",
     desc: "Broad-spectrum, no white cast",
-    img: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=500&q=80",
-    soldOut: true
+    img: "BioreUv.jpeg",
+    soldOut: false 
   },
   {
     id: "p5",
-    name: "Deep Moisturizer Cream",
-    price: 16500,
+    name: "Simple Toner",
+    price: 6500,
     tag: "Hydration+",
     desc: "24hr barrier-repair moisture",
-    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80",
+    img: "Simoletoner.jpeg",
     soldOut: false
   },
   {
