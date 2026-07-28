@@ -189,7 +189,18 @@ const PRODUCTS = [
       { name:"Lip Mask",   price:300, soldOut:false },
       { name:"Lip Brush",  price:700, soldOut:false }
     ]
-  }
+  },
+   {
+    id:"combo2", type:"combo",
+    tag:"Face Care",
+    img:"Sheetmask.jpeg",
+    items:[
+      { name:"face mask",   price:300, soldOut:false },
+      { name:"Eye mask",  price:300, soldOut:false },
+      { name:"Dual face brush",   price:2500, soldOut:false },
+      { name:"Face,eye,lip mask dozen price",  price:3000, soldOut:false }
+    
+   }
 ];
 
 /* Virtual registry: combo sub-items registered at render time */
