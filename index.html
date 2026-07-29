@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubique Skeen Lab | Luxury Skincare, Made to Glow</title>
+<meta name="description" content="Rubique Skeen Lab — premium skincare products. Shop serums, cleansers, sunscreens and more. Nationwide delivery across Nigeria.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- EmailJS — lets contact form send to your Gmail -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-mark">RUBIQUE</div>
+    <div class="preloader-sub">Skeen Lab</div>
+  </div>
+</div>
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<div class="announcement-bar">
+  <div class="announcement-track">
+    <span>Please send your RSL code to our WhatsApp after payment &nbsp;|&nbsp;
+          Confirm current prices on WhatsApp before ordering &nbsp;|&nbsp;
+          Nationwide delivery across Nigeria &nbsp;|&nbsp;
+          Please send your RSL code to our WhatsApp after payment &nbsp;|&nbsp;
+          Confirm current prices on WhatsApp before ordering &nbsp;|&nbsp;
+          Nationwide delivery across Nigeria &nbsp;|&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">Rubique <span>Skeen Lab</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home"     class="nav-link">Home</a>
+      <a href="#products" class="nav-link">Shop</a>
+      <a href="#ritual"   class="nav-link">Our Story</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="cartBtn" class="icon-btn" aria-label="Open cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+      <button id="menuToggle" class="icon-btn menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-content reveal">
+    <p class="eyebrow">Clean · Gentle · Coveted</p>
+    <h1>Glow Naturally with <span>Rubique Skeen Lab</span></h1>
+    <p class="hero-sub">Premium skincare products — tea tree, Dr Rashel, Kuu Spa, body scrubs and many more. Quality you can see, prices you'll love.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary">Shop Now</a>
+      <a href="#contact"  class="btn btn-outline">Contact Us</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>15k+</strong><span>Happy customers</span></div>
+      <div><strong>24+</strong><span>Products available</span></div>
+      <div><strong>4.9★</strong><span>Average rating</span></div>
+    </div>
+  </div>
+  <div class="hero-image reveal">
+    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80" alt="Glowing skincare products">
+    <div class="hero-badge">
+      <i class="fa-solid fa-truck-fast"></i>
+      <span>Nationwide Delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products" class="products-section">
+  <div class="section-header reveal">
+    <p class="eyebrow">The Edit</p>
+    <h2>Shop Our Products</h2>
+    <p class="section-sub">Premium skincare products at great prices. All items are genuine and available for delivery nationwide.</p>
+  </div>
+
+  <!-- Search bar -->
+  <div class="search-wrap reveal">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="productSearch" placeholder="Search products e.g. serum, sunscreen, toner...">
+      <button id="clearSearch" class="clear-search" aria-label="Clear search" style="display:none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- No results message -->
+  <div id="noResults" class="no-results" style="display:none">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <p>No products found for <strong id="searchTerm"></strong></p>
+    <p class="no-results-sub">We might still have it! Send us a message and we'll check for you.</p>
+    <a id="searchWhatsapp" href="#" target="_blank" class="btn btn-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> Ask us about this product
+    </a>
+  </div>
+
+  <div class="product-grid" id="productGrid"><!-- injected by JS --></div>
+
+  <div class="custom-order-note reveal">
+    <i class="fa-brands fa-whatsapp"></i>
+    <p>
+      <strong>Can't find what you're looking for?</strong><br>
+      We don't list every product here. If what you seek isn't shown, kindly reach out on WhatsApp with your full order.<br>
+      <em>Also remember to always confirm current prices on WhatsApp before ordering.</em>
+    </p>
+    <button id="customOrderBtn" class="btn btn-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> Message Us on WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- ===== OUR STORY ===== -->
+<section id="ritual" class="ritual-section reveal">
+  <div class="ritual-image">
+    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=80" alt="Skincare products">
+  </div>
+  <div class="ritual-content">
+    <p class="eyebrow">Why Rubique</p>
+    <h2>Quality skincare, not just products</h2>
+    <p>At Rubique Skeen Lab we bring you the best skincare brands at honest prices. We stock all the products your skin loves:</p>
+    <ul class="ritual-list">
+      <li><i class="fa-solid fa-check"></i> Tea Tree products</li>
+      <li><i class="fa-solid fa-check"></i> Dr Rashel products</li>
+      <li><i class="fa-solid fa-check"></i> Kuu Spa products</li>
+      <li><i class="fa-solid fa-check"></i> Body scrubs &amp; many more</li>
+      <li><i class="fa-solid fa-check"></i> Nationwide delivery across Nigeria</li>
+      <li><i class="fa-solid fa-check"></i> 100% genuine products</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="section-header reveal">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>We'd love to hear from you</h2>
+  </div>
+
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <strong>Location</strong>
+          <p>Lagos, Nigeria</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <p>+234 8166947817</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <p>rubique2026@gmail.com</p>
+        </div>
+      </div>
+      <button id="contactWhatsappBtn" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </button>
+    </div>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <p class="form-note"><i class="fa-solid fa-envelope"></i> Your message goes directly to our email inbox.</p>
+      <div class="form-group">
+        <label for="cName">Full name</label>
+        <input type="text" id="cName" name="cName" placeholder="Your name">
+        <span class="error-msg" id="cNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="cEmail">Email address</label>
+        <input type="email" id="cEmail" name="cEmail" placeholder="you@example.com">
+        <span class="error-msg" id="cEmailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" name="cMessage" rows="5" placeholder="Tell us how we can help"></textarea>
+        <span class="error-msg" id="cMessageError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary full" id="contactSubmitBtn">
+        <i class="fa-solid fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="logo">Rubique <span>Skeen Lab</span></a>
+      <p>Premium skincare, formulated for your glow. Made with care, delivered with love across Nigeria.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Shop Now</h4>
+      <a href="#products">All Products</a>
+      <a href="#products">Serums</a>
+      <a href="#products">Cleansers</a>
+      <a href="#products">Sunscreens</a>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#ritual">Our Story</a>
+      <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://instagram.com/belloruby01" target="_blank" rel="noopener" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@debi_ruby" target="_blank" rel="noopener" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/2348166947817" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Rubique Skeen Lab. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div id="cartOverlay" class="overlay"></div>
+<aside id="cartSidebar" class="cart-sidebar" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3>Fill your Bag</h3>
+    <button id="closeCart" class="icon-btn" aria-label="Close cart">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+  <div id="cartItems" class="cart-items"><!-- injected by JS --></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">&#8358;0</span>
+    </div>
+    <button id="checkoutBtn" class="btn btn-primary full">
+      <i class="fa-solid fa-lock"></i> Checkout with Paystack
+    </button>
+    <button id="whatsappOrderBtn" class="btn btn-whatsapp full">
+      <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+    </button>
+  </div>
+</aside>
+
+<!-- ===== CHECKOUT MODAL ===== -->
+<div id="checkoutModal" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" id="closeCheckoutModal" aria-label="Close">&times;</button>
+    <p class="eyebrow">Almost there</p>
+    <h3>Delivery &amp; Payment Details</h3>
+    <form id="checkoutForm" novalidate>
+      <div class="form-group">
+        <label for="chkName">Full name</label>
+        <input type="text" id="chkName" placeholder="Your name">
+        <span class="error-msg" id="chkNameError"></span>
+      </div>
+      <div class="form-group">
+        <label for="chkEmail">Email address</label>
+        <input type="email" id="chkEmail" placeholder="you@example.com">
+        <span class="error-msg" id="chkEmailError"></span>
+      </div>
+      <div class="form-group">
+        <label for="chkPhone">Phone number</label>
+        <input type="tel" id="chkPhone" placeholder="08012345678">
+        <span class="error-msg" id="chkPhoneError"></span>
+      </div>
+      <div class="form-group">
+        <label for="chkAddress">Delivery address</label>
+        <textarea id="chkAddress" rows="3" placeholder="Street, city, state"></textarea>
+        <span class="error-msg" id="chkAddressError"></span>
+      </div>
+      <div class="modal-total-row">
+        <span>Amount to pay</span>
+        <strong id="modalTotal">&#8358;0</strong>
+      </div>
+      <button type="submit" class="btn btn-primary full" id="payNowBtn">
+        <i class="fa-solid fa-lock"></i> Pay Now
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== SUCCESS MODAL ===== -->
+<div id="successModal" class="modal-overlay">
+  <div class="modal success-modal">
+    <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+    <h3>Order Confirmed!</h3>
+    <p id="successMessage">Thank you for your order!</p>
+    <button id="closeSuccessModal" class="btn btn-primary">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="toast" class="toast"></div>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-stack">
+  <button id="scrollTopBtn" class="float-btn scroll-top-btn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <button id="cartFloat" class="float-btn cart-float-btn" aria-label="Open cart">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span class="badge" id="cartFloatCount">0</span>
+  </button>
+  <a id="whatsappFloat" class="float-btn whatsapp-float-btn" aria-label="Chat on WhatsApp" href="#" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ===== DELIVERY MODAL ===== -->
+<div id="deliveryModal" class="modal-overlay">
+  <div class="modal delivery-modal">
+    <p class="eyebrow">Step 2 of 2</p>
+    <h3>How would you like to receive your order?</h3>
+
+    <div class="delivery-fee-notice">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <p><strong>Important:</strong> Delivery fee is <u>NOT</u> included in your payment. You paid only for your products. You will pay the rider or waybill vehicle <strong>directly by yourself.</strong></p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="delivery-tabs">
+      <button class="dtab active" data-tab="pickup">
+        <i class="fa-solid fa-store"></i> Pickup
+      </button>
+      <button class="dtab" data-tab="homedelivery">
+        <i class="fa-solid fa-truck"></i> Home Delivery
+      </button>
+    </div>
+
+    <!-- PICKUP TAB -->
+    <div id="pickupTab" class="dtab-content active">
+      <p class="tab-hint">Select your nearest pickup location then contact us on WhatsApp to confirm pickup time.</p>
+      <div class="pickup-locations">
+
+        <label class="pickup-card">
+          <input type="radio" name="pickupLocation" value="Iyana Ipaja, Lagos">
+          <div class="pickup-card-body">
+            <div class="pickup-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="pickup-details">
+              <strong>Iyana Ipaja</strong>
+              <span>Lagos, Nigeria</span>
+            </div>
+            <a class="pickup-map-link"
+               href="https://maps.google.com/?cid=331817091794587647"
+               target="_blank" rel="noopener"
+               onclick="event.stopPropagation()">
+              <i class="fa-solid fa-map"></i> Map
+            </a>
+          </div>
+        </label>
+
+        <label class="pickup-card">
+          <input type="radio" name="pickupLocation" value="Ikeja, Lagos">
+          <div class="pickup-card-body">
+            <div class="pickup-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="pickup-details">
+              <strong>Ikeja</strong>
+              <span>Lagos, Nigeria</span>
+            </div>
+            <a class="pickup-map-link"
+               href="https://maps.google.com/?cid=15539725815665893872"
+               target="_blank" rel="noopener"
+               onclick="event.stopPropagation()">
+              <i class="fa-solid fa-map"></i> Map
+            </a>
+          </div>
+        </label>
+
+        <label class="pickup-card">
+          <input type="radio" name="pickupLocation" value="Uniben, Ekosodin, Benin City">
+          <div class="pickup-card-body">
+            <div class="pickup-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="pickup-details">
+              <strong>Uniben, Ekosodin</strong>
+              <span>Benin City, Edo State</span>
+            </div>
+            <a class="pickup-map-link"
+               href="https://maps.google.com/?cid=4965187353460568576"
+               target="_blank" rel="noopener"
+               onclick="event.stopPropagation()">
+              <i class="fa-solid fa-map"></i> Map
+            </a>
+          </div>
+        </label>
+
+      </div>
+      <span class="error-msg" id="pickupError"></span>
+    </div>
+
+    <!-- HOME DELIVERY TAB -->
+    <div id="homedeliveryTab" class="dtab-content">
+      <div class="delivery-address-note">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>Enter your full delivery address below. We will contact you on WhatsApp to confirm and arrange delivery. <strong>You pay the rider directly.</strong></p>
+      </div>
+      <div class="form-group">
+        <label for="homeDeliveryAddress">Your full delivery address</label>
+        <textarea id="homeDeliveryAddress" rows="3"
+          placeholder="House number, street, area, city, state..."></textarea>
+        <span class="error-msg" id="homeAddressError"></span>
+      </div>
+    </div>
+
+    <button id="confirmDeliveryBtn" class="btn btn-primary full">
+      <i class="fa-solid fa-check-circle"></i> Confirm &amp; Get Receipt
+    </button>
+  </div>
+</div>
+
+<!-- ===== RECEIPT MODAL ===== -->
+<div id="receiptModal" class="modal-overlay">
+  <div class="modal receipt-modal">
+    <div id="receiptContent" class="receipt-content"><!-- generated by JS --></div>
+    <div class="receipt-actions">
+      <button id="sendReceiptWhatsapp" class="btn btn-whatsapp full">
+        <i class="fa-brands fa-whatsapp"></i> Send Receipt to Rubique WhatsApp
+      </button>
+      <button id="printReceipt" class="btn btn-outline full">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+      <button id="closeReceipt" class="btn btn-primary full">
+        Done — Continue Shopping
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
